@@ -10,4 +10,6 @@ app.get('/{*splat}', (req, res)=>{
     // res.send()
 })
 
-app.listen(3000, ()=>console.log("server running with in 3000"))
+
+let port = process.env.PORT || 3000
+app.listen(port, ()=>console.log("server running with in ", port))
